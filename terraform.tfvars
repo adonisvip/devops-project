@@ -1,0 +1,7 @@
+region               = "Southeast Asia"
+vm_cp_name           = "control-plane"
+number_worker        = "2"
+vm_size_worker       = "Standard_F2s_v2"
+admin_username       = "k8s"
+ssh_key_name         = "tuananhkey.pub"
+ssh_private_key_name = "tuananhkey.pem"

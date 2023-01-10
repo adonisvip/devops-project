@@ -1,0 +1,5 @@
+sed -i "s+cp ansible_host=control_plane_ip+cp ansible_host=10.0.2.4+g" ./ansible/inventory
+
+sed -i "s+worker1 ansible_host=worker_1_ip+worker1 ansible_host=10.0.2.4+g" ./ansible/inventory
+
+sed -i "s+worker2 ansible_host=worker_2_ip+worker2 ansible_host=10.0.2.4+g" ./ansible/inventory

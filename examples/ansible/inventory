@@ -1,0 +1,9 @@
+[control_plane]
+cp ansible_host=control_plane_ip ansible_user=k8s 
+
+[workers]
+worker1 ansible_host=worker_1_ip ansible_user=k8s
+worker2 ansible_host=worker_2_ip ansible_user=k8s
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
