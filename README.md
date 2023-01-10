@@ -38,7 +38,7 @@ or
 >Access the directory without ssh key:</p>
 >ssh -i private_key_name username@public_ip
 
-1. Set up connect ansible
+5. Set up connect ansible
    
 Run command
 >ssh-agent bash
@@ -62,7 +62,7 @@ Check inventory file
 
 6. Create cluster k8s
 
-- Check connect trong ansible:
+- Check connect on ansible:
 >ansible -i ./ansible/inventory -m ping all
 
 - Install dependencies, access to folder anible you run command
