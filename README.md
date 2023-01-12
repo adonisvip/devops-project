@@ -16,6 +16,7 @@
 1. Edit information on file terraform.tfvars
    
    You need to edit your information
+   
    ![example](image_readme/edit_tfvars.png)
 2. Run terraform
 >terraform init
@@ -149,11 +150,13 @@ login cli
 
 Create Credential for github and dockerhub
 
-**Manage Jenkins -> Manage Credentials -> Global -> Add Cre**
+**Manage Jenkins -> Manage Credentials -> Global -> Add Credentials**
 
 ![example](image_readme/dockerhub_cred.png)
 
 ![example](image_readme/github_cred.png)
+
+*You can generate token from your github repo and add token to password*
 
 ![example](image_readme/jenkins_cred.png)
 
