@@ -1,9 +1,8 @@
-# **THIS PROJECT USED TO DECRIBE THE BASIC DEVOPS PROCESS** 
-
+# **SET UP ARCHITECTURE GITOPS BASIC** 
 
 ## **CLONE PROJECT BY LINK**
 
-[**https://github.com/tuananh281/my_first_project**]
+[**https://github.com/tuananh281/devops-project.git**]
 
 ## PROVISION VM ON MS AZURE
 ![example](image_readme/so_do1.png)
@@ -15,6 +14,7 @@
 
 >On Windows: **right-click key -> Properties -> Security -> Advanced -> Disable inher.... -> OK -> Edit -> Add -> username my device -> OK** 
 1. Edit information on file terraform.tfvars
+   
    You need to edit your information
    ![example](image_readme/edit_tfvars.png)
 2. Run terraform
@@ -222,7 +222,41 @@ Access ArgoCD by browser
 
 ![example](image_readme/create_app_argo.png)
 
+6. Process of implementation
+
+**After commit and push code to github repo 1, Jenkins will run Job 1 build image, add tag for image and push image to dockerhub, end Job 1, run Job 2 update new version of image on deployment.yaml . After a period of time, ArgoCD will sync to github repo 2 and deploy deployment file to k8s cluster**
+
+- Run JOB 1 on Jenkins
+ 
+![example](image_readme/build_job1.png)
+
+- Run JOB 2 on Jenkins
+
+![example](image_readme/build_job2.png)
+
+- ArgoCD sync to github repo
+
+![example](image_readme/argocd_deploy1.png)
+
+![example](image_readme/argocd_deploy.png)
+
+Get the port service of the deployment that has just been deployed
+   kubectl get all -n deploy-argocd
+
+# Result 
+
+Access by browser: http://ip_public_control-plane:port
+
+![example](image_readme/result.png)
+
+You can edit file index.jade on folder views to test pipeline CICD
+
+![example](image_readme/test_gitops.png)
+
+![example](image_readme/test2.png)
+
+![example](image_readme/test3.png)
 
 
 
-
+## THE END.
