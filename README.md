@@ -176,7 +176,7 @@ Create Credential for github and dockerhub
       Script Path: Jenkinsfile
 -> Save
 
-## Create JOB 2: Get params from JOB 1 and update manifest to GitHub ##
+## Create JOB 2: Get paramester from JOB 1 and update manifest to GitHub ##
 
 **Dashboard -> New Item -> Item name: update-manifest-github -> Pipeline -> OK**
 
